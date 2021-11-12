@@ -1,6 +1,6 @@
-import './App.css';
 import { NoteList } from './components/NoteList';
 import { useEffect, useState } from 'react';
+import { Styles } from './AppStyles.jsx';
 
 export const App = () => {
   const [child, setChild] = useState([]);
@@ -22,21 +22,21 @@ export const App = () => {
   }
   
   return (
-    <div className="content">
-      <div className="center">
+    <Styles.Content>
+      <Styles.Center>
         <header>
-          <span>Bem-vindo à sua lista de tarefas!</span>
+          <span>Welcome to your To Do list!</span>
           <div>
             <input type="text" value={text} onChange={(e) => setText(e.target.value)} />
             <button type="button" className="button-create" onClick={handleAdd}>
-                  Criar uma nova tarefa
+                  Create new To Do
             </button>
           </div>
         </header>
-        <div className="notes">
+        <Styles.Notes>
           <NoteList noteList={child} deleteNote={deleteNote}/>
-        </div>
-      </div>
-    </div>
+        </Styles.Notes>
+      </Styles.Center>
+    </Styles.Content>
   );
 }
