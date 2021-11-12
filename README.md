@@ -6,5 +6,5 @@ This project contains the progress of the study of `React Hooks` through a `To D
 - [X] useEffect
 
 Next moves: 
-- [] Styled Components
-- [] Change background note color if you have completed the task
+- [ ] Styled Components
+- [ ] Change background note color if you have completed the task
