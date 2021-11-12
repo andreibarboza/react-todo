@@ -1,0 +1,38 @@
+.note-content {
+    width: fit-content;
+    min-width: 120px;
+    max-width: 220px;
+
+    background-color: rgba(156, 156, 156, 0.452);
+    border-radius: 5px;
+    padding: 10px;
+
+    margin: 0 10px 10px 0;
+}
+
+.note-content .header-title {
+    display: flex;
+    justify-content: flex-end;
+
+    font-size: 12px;
+
+    gap: 10px;
+}
+
+.note-content .header-title > svg {
+    width: 16px !important;
+    height: 16px !important;
+    cursor: pointer;
+}
+
+.note-content .separator {
+    width: 100%;
+    height: 0.5px;
+    
+    background-color: rgba(255, 255, 255, 0.483);
+    margin: 5px 0;
+}
+
+.note-content .todo-item-text {
+    font-size: 14px;
+}
