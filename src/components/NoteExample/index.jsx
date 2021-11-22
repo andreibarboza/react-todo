@@ -16,7 +16,7 @@ export const NoteExample = ({ text, deleteNote }) => {
                     <Checkbox value={check} funcClick={checkboxHandler}/>
                 </Styles.HeaderLeft>
                 <Styles.HeaderRight>
-                    {/* <AiOutlineEdit /> */}
+                        {/* <AiOutlineEdit /> */}
                     <MdDeleteOutline onClick={deleteNote}/>
                 </Styles.HeaderRight>
             </Styles.HeaderTitle>
