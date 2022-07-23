@@ -10,18 +10,13 @@ export const NoteExample = ({ text, deleteNote }) => {
     const checkboxHandler = () => setCheck(prevBool => !prevBool);
 
     return (
-        <Styles.NoteContent conclued={check}>  
-            <Styles.HeaderTitle>
-                <Styles.HeaderLeft>
-                    <Checkbox value={check} funcClick={checkboxHandler}/>
-                </Styles.HeaderLeft>
-                <Styles.HeaderRight>
-                        {/* <AiOutlineEdit /> */}
-                    <MdDeleteOutline onClick={deleteNote}/>
-                </Styles.HeaderRight>
-            </Styles.HeaderTitle>
-            <Styles.Separator />
+        <Styles.NoteContent conclued={check}>
+            <Checkbox value={check} funcClick={checkboxHandler}/>
             <Styles.ItemText>{text}</Styles.ItemText>
+            <Styles.IconContent>
+                {/* <AiOutlineEdit /> */}
+                <MdDeleteOutline onClick={deleteNote}/>
+            </Styles.IconContent>
         </Styles.NoteContent>
     );
 }

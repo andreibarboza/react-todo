@@ -8,6 +8,8 @@ export const Styles = {
         height: 100vh;
         width: 100vw;
 
+        overflow: hidden;
+
         min-width: 660px;
 
         display: flex;
@@ -15,14 +17,10 @@ export const Styles = {
         justify-content: center;
 
         & header {
-            margin: 80px 0 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+
         }
 
             & header span {
-            margin-right: 10px;
         }
     `,
 
@@ -32,10 +30,10 @@ export const Styles = {
     `,
 
     Notes: styled.div`
+        width: 100%;
         display: flex;
         flex-direction: column;
-        
-
-        flex-wrap: wrap;
+        height: calc(100% - 200px);
+        overflow-y: auto;
     `
 }

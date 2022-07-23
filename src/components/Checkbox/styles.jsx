@@ -6,8 +6,8 @@ export const Styles = {
         align-items: center;
         justify-content: center;
 
-        height: 18px;
-        width: 18px;
+        min-height: 18px;
+        min-width: 18px;
         border-radius: 5px;
         background-color: #2B2F33;
         cursor: pointer;
