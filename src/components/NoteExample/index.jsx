@@ -11,7 +11,7 @@ export const NoteExample = ({ text, deleteNote }) => {
 
     return (
         <Styles.NoteContent conclued={check}>
-            <Checkbox value={check} funcClick={checkboxHandler}/>
+            <Checkbox value={check} checkboxHandler={checkboxHandler}/>
             <Styles.ItemText>{text}</Styles.ItemText>
             <Styles.IconContent>
                 {/* <AiOutlineEdit /> */}

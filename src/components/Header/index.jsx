@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Styles } from './styles';
+import { AiOutlinePlus } from 'react-icons/ai';
 
 export const Header = ({ notes, setNotes }) => {
   const [text, setText] = useState('');
@@ -25,13 +26,20 @@ export const Header = ({ notes, setNotes }) => {
   return (
     <Styles.Header>
       <Styles.Title>Welcome to your To Do list!</Styles.Title>
-      <div onKeyUp={(e) => e.key === 'Enter' && handleAdd()}>
-          <input type="text" value={text} onChange={(e) => handleSetText(e.target.value)} />
-          <button type="button" className="button-create" onClick={handleAdd}>
-                Create new To Do
-          </button>
-        {error.length !== 0 && <div>{error}</div>}
-      </div>
+      <Styles.Container>
+          <Styles.Textarea 
+            type="text" 
+            value={text} 
+            onChange={(e) => handleSetText(e.target.value)}
+          />
+          <Styles.Button 
+            type="button"
+            onClick={handleAdd}
+          >
+            <AiOutlinePlus size={18}/>
+          </Styles.Button>
+        {error.length !== 0 && <Styles.Error>{error}</Styles.Error>}
+      </Styles.Container>
     </Styles.Header>
   );
 }

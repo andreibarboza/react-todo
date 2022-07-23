@@ -15,13 +15,6 @@ export const Styles = {
         display: flex;
         align-items: center;
         justify-content: center;
-
-        & header {
-
-        }
-
-            & header span {
-        }
     `,
 
     Center: styled.div`
@@ -33,7 +26,7 @@ export const Styles = {
         width: 100%;
         display: flex;
         flex-direction: column;
-        height: calc(100% - 200px);
+        height: calc(100% - 220px);
         overflow-y: auto;
     `
 }
