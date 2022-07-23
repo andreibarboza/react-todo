@@ -2,9 +2,7 @@ import styled from "styled-components"
 
 export const Styles = {
     NoteContent: styled.div`
-        width: fit-content;
-        min-width: 120px;
-        max-width: 220px;
+        width: 100%;
         background-color: ${props => props.conclued ? '#28a745' : '#9c9c9c73'};
         border-radius: 5px;
         padding: 10px;

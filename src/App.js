@@ -5,13 +5,24 @@ import { NoteExample } from './components/NoteExample'
 export const App = () => {
   const [child, setChild] = useState([]);
   const [text, setText] = useState('');
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     setText('');
   }, [child]);
+
+  const handleSetText = (value) => {
+    setError('')
+    setText(value);
+  }
   
   
   const handleAdd = () => {
+    if (text.length <= 3) {
+      setError('Minimun 3 characters to create todo');
+      return;
+    };
+
     setChild([...child, text]);
   }
   
@@ -26,11 +37,12 @@ export const App = () => {
       <Styles.Center>
         <header>
           <span>Welcome to your To Do list!</span>
-          <div>
-            <input type="text" value={text} onChange={(e) => setText(e.target.value)} />
-            <button type="submit" className="button-create" onClick={handleAdd}>
-                  Create new To Do
-            </button>
+          <div onKeyUp={(e) => e.key === 'Enter' && handleAdd()}>
+              <input type="text" value={text} onChange={(e) => handleSetText(e.target.value)} />
+              <button type="button" className="button-create" onClick={handleAdd}>
+                    Create new To Do
+              </button>
+            {error.length !== 0 && <div>{error}</div>}
           </div>
         </header>
         <Styles.Notes>
