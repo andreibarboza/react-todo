@@ -28,7 +28,7 @@ export const Header = ({ notes, setNotes }) => {
       <Styles.Title>Welcome to your To Do list!</Styles.Title>
       <Styles.Container>
           <Styles.Textarea 
-            type="text" 
+            type="text"
             value={text} 
             onChange={(e) => handleSetText(e.target.value)}
           />
